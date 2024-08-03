@@ -1,0 +1,31 @@
+﻿<div class="shadow rounded">
+    <div class="p-2">
+        <form autocomplete="off">
+            <div class="mb-2 row">
+                <div class="col-11 text-center ui-widget p-3">
+                    <input type="text" id="tags" placeholder="Search Recipe" class="form-control" name="Recipe" />
+                </div>
+                <div class="col-1 p-3">
+                    <button type="submit" class="btn btn-sm btn-success p-2">Search</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+<script>
+    $(function () {
+        var availableTags = [
+            "mushrooms", "pumpkin", "apple", "banana", "blackberry", "blueberry", "coconut", "grape",
+            "kiwifruit", "mango", "orange", "papaya", "pineapple", "strawberry", "watermelon", "salad",
+            "pizza", "pasta", "popcorn", "hamburger", "pie", "cake", "sausage", "kebab", "poutine", "seafood",
+            "chips", "fries", "masala", "chicken", "chocolate", "sushi", "ice cream"
+        ];
+        $("#tags").autocomplete({
+            source: availableTags,
+            minlength:2
+        });
+    });
+</script>
